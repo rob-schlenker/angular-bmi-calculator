@@ -1,27 +1,43 @@
 <!--src/app/bmi-calculator/bmi-calculator.component.html-->
 
-
 <div class="container">
-    <h1>GeeksforGeeks</h1>
-    <h3>BMI CALCULATOR IN ANGULAR</h3>
-    <div class="input-group">
-        <label>
-            Weight (kg):
-            <input type="number" [(ngModel)]="weight" 
-            placeholder="Enter your weight" />
-        </label>
-    </div>
-    <div class="input-group">
-        <label>
-            Height (cm):
-            <input type="number" [(ngModel)]="height" 
-            placeholder="Enter your height" />
-        </label>
-    </div>
-    <button (click)="calculateBMI()">Calculate</button>
-    <div class="result" *ngIf="bmi !== null">
-        <h3>Your BMI: {{ bmi }}</h3>
-        <h3>Status: {{ status }}</h3>
-    </div>
+  <h1>Rob Schlenker</h1>
+  <h3>BMI CALCULATOR IN ANGULAR</h3>
+  <div class="unit-buttons">
+    <button
+      (click)="setUnit('metric')"
+      [class.active]="selectedUnit === 'metric'"
+    >
+      Metric
+    </button>
+    <button
+      (click)="setUnit('imperial')"
+      [class.active]="selectedUnit === 'imperial'"
+    >
+      Imperial
+    </button>
+  </div>
+  <div class="input-group" *ngIf="selectedUnit === 'metric'">
+    <label>
+        Height
+      <input type="number" [(ngModel)]="metricHeight" placeholder="Height (cm)">
+        Weight
+      <input type="number" [(ngModel)]="metricWeight" placeholder="Weight (kg)">
+    </label>
+  </div>
+  <div class="input-group" *ngIf="selectedUnit === 'imperial'">
+    <label>
+        Height Feet
+      <input type="number" [(ngModel)]="imperialHeightFeet" placeholder="Height (feet)">
+      Height Inches
+      <input type="number" [(ngModel)]="imperialHeightInches" placeholder="Height (inches)">
+      Weight
+      <input type="number" [(ngModel)]="imperialWeight" placeholder="Weight (lbs)">
+    </label>
+  </div>
+  <button (click)="calculateBMI()">Calculate</button>
+  <div class="result" *ngIf="bmiResult !== null">
+    <h3>Your BMI: {{ bmiResult }}</h3>
+    <h3>Status: {{ status }}</h3>
+  </div>
 </div>
-
