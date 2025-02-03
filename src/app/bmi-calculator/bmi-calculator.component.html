@@ -1,1 +1,27 @@
-<p>bmi-calculator works!</p>
+<!--src/app/bmi-calculator/bmi-calculator.component.html-->
+
+
+<div class="container">
+    <h1>GeeksforGeeks</h1>
+    <h3>BMI CALCULATOR IN ANGULAR</h3>
+    <div class="input-group">
+        <label>
+            Weight (kg):
+            <input type="number" [(ngModel)]="weight" 
+            placeholder="Enter your weight" />
+        </label>
+    </div>
+    <div class="input-group">
+        <label>
+            Height (cm):
+            <input type="number" [(ngModel)]="height" 
+            placeholder="Enter your height" />
+        </label>
+    </div>
+    <button (click)="calculateBMI()">Calculate</button>
+    <div class="result" *ngIf="bmi !== null">
+        <h3>Your BMI: {{ bmi }}</h3>
+        <h3>Status: {{ status }}</h3>
+    </div>
+</div>
+

@@ -1,23 +1,23 @@
+// src/app/bmi-calculator/bmi-calculator.component.spec.ts
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BmiCalculatorComponent } from './bmi-calculator.component';
 
 describe('BmiCalculatorComponent', () => {
-  let component: BmiCalculatorComponent;
-  let fixture: ComponentFixture<BmiCalculatorComponent>;
+    let component: BmiCalculatorComponent;
+    let fixture: ComponentFixture<BmiCalculatorComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BmiCalculatorComponent]
-    })
-    .compileComponents();
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            declarations: [BmiCalculatorComponent]
+        });
+        fixture = TestBed.createComponent(BmiCalculatorComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-    fixture = TestBed.createComponent(BmiCalculatorComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
