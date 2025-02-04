@@ -42,6 +42,7 @@ export class BmiCalculatorComponent {
     this.imperialHeightInches = null
     this.imperialWeight = null
     this.bmiResult = null
+    this.saveToCookies()
   }
 
   // Save inputs to cookies
