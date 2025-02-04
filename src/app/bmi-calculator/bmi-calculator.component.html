@@ -1,8 +1,8 @@
 <!--src/app/bmi-calculator/bmi-calculator.component.html-->
 
 <div class="container">
-  <h1>Rob Schlenker's</h1>
-  <h3>BMI CALCULATOR IN ANGULAR</h3>
+  <h3>Rob Schlenker's</h3>
+  <h1>BMI CALCULATOR</h1>
   <div class="unit-buttons">
     <button
       (click)="setUnit('metric')"
@@ -38,20 +38,27 @@
   </div>
   <div class="input-group" *ngIf="selectedUnit === 'imperial'">
     <label>
-      <p>Height Feet</p>
-      <input
-        type="number"
-        min="0"
-        [(ngModel)]="imperialHeightFeet"
-        placeholder="Height (feet)"
-      />
-      <p>Height Inches</p>
-      <input
-        type="number"
-        min="0"
-        [(ngModel)]="imperialHeightInches"
-        placeholder="Height (inches)"
-      />
+      <div class="imperial-units">
+        <div class="imperial-field">
+          <p>Height Feet</p>
+          <input
+            type="number"
+            min="0"
+            [(ngModel)]="imperialHeightFeet"
+            placeholder="Height (feet)"
+          />
+        </div>
+        <div class="imperial-field">
+          <p>Height Inches</p>
+          <input
+            type="number"
+            min="0"
+            [(ngModel)]="imperialHeightInches"
+            placeholder="Height (inches)"
+          />
+        </div>
+      </div>
+
       <p>Weight</p>
       <input
         type="number"

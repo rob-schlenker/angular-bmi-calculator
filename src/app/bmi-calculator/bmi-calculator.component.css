@@ -1,6 +1,14 @@
 /** src/app/bmi-calculator/bmi-calculator-component.css**/
 
-body, h1, h2, h3, h4, h5, h6, p, button {   
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
   font-family: 'Oxanium', serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -18,7 +26,7 @@ body, h1, h2, h3, h4, h5, h6, p, button {
 }
 
 h1 {
-  color: #27ae60;
+  color: #1abc9d;
   font-size: 2.8em;
   margin-bottom: 20px;
   font-weight: 700;
@@ -59,6 +67,15 @@ h1 {
   gap: 20px;
 }
 
+.imperial-units {
+  display: flex;
+  width: 100%;
+}
+
+.imperial-field {
+  width: 50%;
+}
+
 button {
   padding: 14px 30px;
   background-color: #1abc9c;
@@ -77,16 +94,16 @@ button:hover {
 }
 
 .reset-button {
-    padding: 7px 15px;
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+  padding: 7px 15px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
 .result {
   margin-top: 25px;
